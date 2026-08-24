@@ -101,7 +101,7 @@ export function Pricing() {
                       key={i}
                       className={cn(
                         "h-14 border-b border-band-border px-5 text-center",
-                        plans[i].popular && "border-x border-band-border bg-primary/5",
+                        plans[i]!.popular && "border-x border-band-border bg-primary/5",
                       )}
                     >
                       <CellValue value={v} />
@@ -156,7 +156,7 @@ export function Pricing() {
                 {rows.map((r) => (
                   <li key={r.feature} className="flex items-center justify-between gap-4 py-2.5">
                     <span className="text-sm text-band-foreground">{r.feature}</span>
-                    <CellValue value={r.values[i]} />
+                    <CellValue value={r.values[i]!} />
                   </li>
                 ))}
               </ul>
